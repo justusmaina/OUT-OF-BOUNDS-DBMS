@@ -1,31 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
+
 using System.Text;
 
 namespace PTSLibrary
 {
-    class Team
+    [Serializable]
+    public class Team
     {
+        public Team() { }
         private int id;
         private string location;
         private string name;
-        private TeamLeader Leader;
+        private TeamLeader leader;
 
         public int TeamId
         {
             get { return id; }
             set { id = value; }
         }
-
         public TeamLeader Leader
         {
-            get { return Leader; }
-            set { Leader = value; }
+            get { return leader; }
+            set { leader = value; }
         }
-
         public string Location
         {
-            get { return Location; }
+            get { return location; }
             set { location = value; }
         }
         public string Name
@@ -33,13 +34,15 @@ namespace PTSLibrary
             get { return name; }
             set { name = value; }
         }
-
-        public Team(int id, string location, string name TeamLeader leader)
+        public Team(int id, string location, string name, TeamLeader leader)
         {
+
             this.location = location;
             this.name = name;
             this.id = id;
             this.leader = leader;
+
         }
     }
+
 }

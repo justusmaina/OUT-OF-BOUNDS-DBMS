@@ -2,14 +2,17 @@
 using System.Collections.Generic;
 using System.Text;
 
+
 namespace PTSLibrary
 {
-    class Customer : User
-        {
+    [Serializable]
+  public class Customer : User
+    {
+        public Customer() { }
         public Customer(string name, int id)
         {
-                 this.name = name
-                 this.id = id
+            this.name = name;
+            this.id = id;
         }
-}
+    }
 }

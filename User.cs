@@ -4,20 +4,19 @@ using System.Text;
 
 namespace PTSLibrary
 {
-	class User
+    [Serializable]
+    public class User
     {
-		protected string name;
-		protected int id;
+        protected string name;
+        protected int id;
 
-		public string name
+        public string Name
         {
-			get { return name; }
+            get { return name; }
         }
-		
-		public int id
+        public int Id
         {
-			get { return id; }
+            get { return id; }
         }
     }
 }
-
